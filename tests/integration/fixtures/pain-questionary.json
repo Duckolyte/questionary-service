@@ -1,0 +1,293 @@
+{
+  "questions":
+  [
+    {
+      "code": "1",
+      "label": "Leiden Sie in der letzten Zeit an Schmerzen?",
+      "answers": [
+        {
+          "code": "0",
+          "label": "Ja",
+          "next": "/question?code=100"
+        },
+        {
+          "code": "1",
+          "label": "Nein",
+          "next": "/acquisition"
+        }
+      ]
+    },
+    {
+      "code": "100",
+      "label": "Wo haben Sie Schmerzen, wo sind sie am stärksten?",
+      "answers": [
+        {
+          "code": "0",
+          "label": "Kopf",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "1",
+          "label": "Gesicht",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "2",
+          "label": "Nacken",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "3",
+          "label": "Schulter",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "4",
+          "label": "Oberarm",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "5",
+          "label": "Ellbogen",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "6",
+          "label": "Unterarm",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "7",
+          "label": "Handgelenk",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "8",
+          "label": "Hand",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "9",
+          "label": "Brust",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "10",
+          "label": "Bauch",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "11",
+          "label": "Brustwirbelsäule",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "12",
+          "label": "Lendenwirbelsäule",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "13",
+          "label": "Flanke",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "14",
+          "label": "Hüfte",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "15",
+          "label": "Gesäss",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "16",
+          "label": "Leiste",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "17",
+          "label": "Oberschenkel",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "18",
+          "label": "Knie",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "19",
+          "label": "Unterschenkel",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "20",
+          "label": "Sprunggelenk",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "21",
+          "label": "Fuss",
+          "next": "/question?code=101"
+        },
+        {
+          "code": "22",
+          "label": "Generalisiert, nicht lokalisiert",
+          "next": "/question?code=150"
+        }
+      ]
+    },
+    {
+      "code": "101",
+      "label": "Auf welcher Seite?",
+      "answers":
+      [
+        {
+          "code": "0",
+          "label": "Links",
+          "next": "/question?code=150"
+        },
+        {
+          "code": "1",
+          "label": "Rechts",
+          "next": "/question?code=150"
+        },
+        {
+          "code": "2",
+          "label": "Beidseitig",
+          "next": "/question?code=150"
+        }
+      ]
+    },
+    {
+      "code": "150",
+      "label": "Seit wann haben Sie diese Schmerzen ungefähr?",
+      "answers":
+      [
+        {
+          "code": "0",
+          "label": "Datum",
+          "value": "",
+          "next": "/question?code=200"
+        }
+      ]
+    },
+    {
+      "code": "200",
+      "label": "Wie stark sind die Schmerzen, wenn sie schlimm werden?",
+      "answers":
+      [
+        {
+          "code": "0",
+          "max_range": "",
+          "min_range": "",
+          "step": "",
+          "value": "",
+          "next": "/question?code=201"
+        }
+      ]
+    },
+    {
+      "code": "201",
+      "label": "Wie stark sind die Schmerzen in Ruhe?",
+      "answers":
+      [
+        {
+          "code": "0",
+          "max_range": "",
+          "min_range": "",
+          "step": "",
+          "value": "",
+          "next": "/question?code=250"
+        }
+      ]
+    },
+    {
+      "code": "250",
+      "label": "Wie würden Sie die Schmerzen beschreiben?",
+      "answers":
+      [
+        {
+          "code": "0",
+          "label": "Brennen",
+          "next": "/question?code=300"
+        },
+        {
+          "code": "1",
+          "label": "Druck",
+          "next": "/question?code=300"
+        },
+        {
+          "code": "2",
+          "label": "Messerstich",
+          "next": "/question?code=300"
+        },
+        {
+          "code": "3",
+          "label": "Krampf/Kolik",
+          "next": "/question?code=300"
+        },
+        {
+          "code": "4",
+          "label": "Dumpf",
+          "next": "/question?code=300"
+        }
+      ]
+    },
+    {
+      "code": "300",
+      "label": "Sind die Schmerzen konstant oder kommen und gehen?",
+      "answers":
+      [
+        {
+          "code": "0",
+          "label": "Konstant",
+          "next": "/question?code=301"
+        },
+        {
+          "code": "1",
+          "label": "Kommen und gehen",
+          "next": "/question?code=301"
+        }
+      ]
+    },
+    {
+      "code": "301",
+      "label": "Wie lange dauern die Episoden, wenn die Schmerzen kommen?",
+      "answers": [
+        {
+          "code": "0",
+          "label": "Einige Minuten",
+          "next": "/question?code=350"
+        },
+        {
+          "code": "1",
+          "label": "Halbe Stunde bis einige Stunden",
+          "next": "/question?code=350"
+        },
+        {
+          "code": "2",
+          "label": "Halber Tag bis einige Tage",
+          "next": "/question?code=350"
+        }
+      ]
+    },
+    {
+      "code": "350",
+      "label": "Haben Sie noch anderswo nennenswerte Schmerzen?",
+      "answers": [
+        {
+          "code": "0",
+          "label": "Ja",
+          "next": "/question?code=100"
+        },
+        {
+          "code": "1",
+          "label": "Nein",
+          "next": "/acquisition"
+        }
+      ]
+    }
+  ]
+}
