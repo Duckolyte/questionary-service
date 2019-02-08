@@ -2,7 +2,7 @@ import tornado.ioloop
 import tornado.web
 
 # import application
-from ms_tornado_questionset.application.application_context import ApplicationContext
+from ms_tornado_questionary.application.application_context import ApplicationContext
 
 
 def setup_server():

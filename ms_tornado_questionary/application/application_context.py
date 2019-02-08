@@ -5,10 +5,10 @@ import tornado.web
 #from view import partials
 
 # import controllers
-from ms_tornado_questionset.controller.questionset import QuestionHandler
+from ms_tornado_questionary.controller.questionary import QuestionaryHandler
 
 # import connection
-from ms_tornado_questionset.application.mongo_connection_manager import MongoConnectionManager
+from ms_tornado_questionary.application.mongo_connection_manager import MongoConnectionManager
 
 
 class ApplicationContext(tornado.web.Application):
@@ -16,7 +16,7 @@ class ApplicationContext(tornado.web.Application):
     def __init__(self):
 
         handlers = [
-            (r"/question", QuestionHandler)
+            (r"/questionary", QuestionaryHandler)
             ]
 
         # template_path='C:/Users/andygg/PycharmProjects/tornado-formalyser/templates'

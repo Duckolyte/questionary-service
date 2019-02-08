@@ -1,5 +1,4 @@
 from ms_tornado_questionary.model.questionary import Questionary, Question, Answer
-#from ms_tornado_questionary.model.questionary import Question
 
 
 class QuestionaryService:
@@ -11,7 +10,10 @@ class QuestionaryService:
         return Questionary.objects.get({'_id': questionary_id})
 
     def create_questionary(self, questionary_dict):
-        Questionary(questionary_dict).save()
+        Questionary(
+            patient_id=questionary_dict["patientId"],
+            question_answer_pairs=questionary_dict["questionAnswerPairs"]
+        ).save()
 
 
 class AnswerService:

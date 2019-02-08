@@ -11,13 +11,14 @@ from pymodm.errors import \
     InvalidModel
 
 from ms_tornado_questionary.service.questionary import QuestionaryService
+from ms_tornado_questionary.controller.base import BaseHandler
 
 from ms_tornado_questionary.model.questionary import Questionary
 
 from bson import objectid
 
 
-class QuestionaryHandler(RequestHandler):
+class QuestionaryHandler(BaseHandler):
 
     def data_received(self, chunk):
         pass
@@ -35,20 +36,20 @@ class QuestionaryHandler(RequestHandler):
     def post(self, *args, **kwargs):
         questionary_service = QuestionaryService()
 
-        questions = self.get_body_argument(
-            name="questions",
+        inc_body = self.request.body.decode('utf-8')
+
+        questionary_dict = json.loads(inc_body)
+
+        questionary_service.create_questionary(
+            questionary_dict=questionary_dict
         )
 
-        answers = self.get_body_argument(
-            name="answers",
-        )
+        # TODO below is handled by the server default
 
+        '''
         try:
             questionary_service.create_questionary(
-                questionary_dict={
-                    "questions": questions,
-                    "answers": answers
-                }
+                questionary_dict=questionary_dict
             )
         except (ModelDoesNotExist, InvalidModel, MultipleObjectsReturned):
             self.write(
@@ -61,7 +62,9 @@ class QuestionaryHandler(RequestHandler):
 
         self.write(
             HTTPResponse(
+                request=self.request,
                 code=200,
                 reason="OK"
             )
         )
+        '''

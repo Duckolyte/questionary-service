@@ -6,9 +6,11 @@ from pymodm import MongoModel, fields
 class Questionary(MongoModel):
     '''
     _id is auto generated
-    '''
     questions = fields.ListField()
     answers = fields.ListField()
+    '''
+    patient_id = fields.CharField()
+    question_answer_pairs = fields.ListField()
 
     class Meta:
         write_concern = WriteConcern(j=True)
