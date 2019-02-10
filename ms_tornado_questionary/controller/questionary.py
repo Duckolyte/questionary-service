@@ -44,7 +44,7 @@ class QuestionaryHandler(BaseHandler):
             questionary_dict=questionary_dict
         )
 
-        # TODO below is handled by the server default
+        # TODO below is handled by the server default 500
 
         '''
         try:
