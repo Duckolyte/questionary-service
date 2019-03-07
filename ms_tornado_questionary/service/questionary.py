@@ -7,7 +7,10 @@ class QuestionaryService:
         pass
 
     def find_questionary(self, questionary_id):
-        return Questionary.objects.get({'_id': questionary_id})
+        queryset = Questionary.objects.get(
+            {'_id': questionary_id}
+        ).to_son().to_dict()
+        return queryset
 
     def create_questionary(self, questionary_dict):
         Questionary(
